@@ -1,5 +1,6 @@
 "use strict";
 
+
 window.onload = function () {
   initCourseTable();
 
@@ -8,14 +9,13 @@ window.onload = function () {
 
 function initCourseTable() {
   let table = document.getElementById("displayTable");
-  //   let tablebody = document.createElement("tbody");
+    let tbody = document.getElementById("tbody");
 
-  //   table.appendChild(tablebody);
   fetch("http://localhost:8081/api/courses")
     .then((response) => response.json())
     .then((data) => {
       for (let course of data) {
-        let row = table.insertRow(-1);
+        let row = tbody.insertRow(-1);
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);

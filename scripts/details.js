@@ -1,6 +1,7 @@
 "use strict";
 
 let table = document.getElementById("table");
+let tbody=document.getElementById('tbody')
 
 window.onload = function () {
   const urlParams = new URLSearchParams(location.search);
@@ -16,7 +17,7 @@ window.onload = function () {
 };
 
 function addDataToTable(data) {
-  let row = table.insertRow(-1);
+  let row = tbody.insertRow(-1);
   let cell1 = row.insertCell(0);
   let cell2 = row.insertCell(1);
   let cell3 = row.insertCell(2);
